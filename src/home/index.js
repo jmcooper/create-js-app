@@ -8,6 +8,7 @@ const Home = props => {
   return (
     <div>
       <Helmet title="Home" />
+      <div className={styles.hero} />
       <h1>
         Hello <span className={styles.yellow}>world</span>
       </h1>

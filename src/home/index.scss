@@ -1,3 +1,9 @@
+.hero {
+  width: 870px;
+  height: 340px;
+  background: url('./homestar.gif') no-repeat;
+}
+
 .yellow {
-  color: yellow;
+  color: color(yellow tint(70%));
 }

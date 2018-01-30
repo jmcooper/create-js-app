@@ -49,6 +49,28 @@ export default {
             },
           },
           { loader: 'sass-loader' },
+          {
+            loader: 'postcss-loader',
+            options: {
+              plugins: () => [
+                require('postcss-import')(),
+                require('postcss-cssnext')(),
+              ],
+            },
+          },
+        ],
+      },
+      {
+        test: /\.(jpg|png|gif)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              hash: 'sha512',
+              digest: 'hex',
+              name: '[name].[hash].[ext]',
+            },
+          },
         ],
       },
     ],

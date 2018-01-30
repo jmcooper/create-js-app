@@ -1,0 +1,22 @@
+block head_extras
+  script(type="text/javascript", src="//s.pluralsight.com/analytics/analytics-facade.v2.0.0.js")
+
+block content
+  div.error-display
+    section.error-display__header
+      a.error-display__brand(href="//pluralsight.com") Pluralsight
+
+    main.error-display__content
+      h1.error-display__title 500 huh?
+      p.error-display__copy We’re either full to the brim, down for maintenance, or a sudden zombie plague is sweeping the globe.
+
+      form.error-display__form(method="get", action="//pluralsight.com/search")
+        input.error-display__form-input(name="searchTerm", placeholder="Search Pluralsight...", type="search")
+
+        button.error-display__form-submit(type="submit")
+          i.error-display__form-icon.ps-i-search
+
+block footer_extras
+  script(type='text/javascript').
+    var analyticsFacade = new window.AnalyticsFacade({contextName: 'learner'})
+    analyticsFacade.page()

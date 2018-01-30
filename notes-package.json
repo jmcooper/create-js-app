@@ -1,0 +1,48 @@
+{
+  "dependencies": {
+    "@pluralsight/ps-design-system-core": "4.1.0",
+    "@pluralsight/ps-express-health": "1.0.2", //used to create a health-check endpoint for monitoring
+    "bunyan": "1.8.12", //bunyun logger
+    "connect-requestid": "1.1.0", //used to add a requestid to logs
+    "cookie-parser": "1.4.3", //parse http cookies from request
+    "express": "4.16.2", //web server
+    "express-manifest-helpers": "0.4.0", //used to inject webpack hashed assets into index.pug
+    "newrelic": "2.6.1",
+    "pug": "2.0.0-rc.4", //pug template engine for express
+    "ramda": "0.25.0",
+    "react-helmet": "5.2.0", //used to update <head> elements from components -- such as <title>
+    "serve-favicon": "2.4.5" //serve the favicon.ico file
+  },
+  "devDependencies": {
+    "babel-cli": "6.16.0", //command-line for babel including babel-node
+    "babel-core": "6.17.0", //babel - transpile down to ES5
+    "babel-loader": "6.2.5", //webpack loader to run babel
+    "babel-plugin-add-module-exports": "^0.2.1", //support `export default ...`
+    "babel-plugin-ramda": "^1.4.3", //filter out unused ramda dependencies
+    "babel-plugin-transform-class-properties": "6.24.1", //allow es6 class syntax
+    "babel-plugin-transform-decorators-legacy": "1.3.4", //allow es6 decorators
+    "babel-plugin-transform-export-extensions": "6.22.0", //support additional import...from cases
+    "babel-polyfill": "6.26.0", //old browser support support es6
+    "babel-preset-env": "^1.6.1", //support the latest browser versions (defined in config)
+    "babel-preset-es2015": "6.24.1", //transpile down to es2015
+    "babel-preset-react": "6.24.1", //transpile react/jsx
+    "babel-preset-stage-2": "6.24.1", //es2016 stage 2 support
+    "browser-sync": "^2.23.6", //watch for changes and reload browsers, keep multiple browsers in sync
+    "chai": "3.5.0", // test assertions
+    "compression": "1.6.2", //use to compress (gzip) bundles?
+    "css-loader": "0.25.0", //process css imports and url() assets
+    "eslint": "3.8.1", //linting
+    "eslint-plugin-import": "2.0.1", //support import/export in linting
+    "extract-text-webpack-plugin": "1.0.1", //extracts text from css files (and others?) into a separate bundle to increase load speed by loading the text/css in parallel to the js bundle
+    "jsdom": "9.8.0", //used to emulate browser features for unit testing
+    "mocha": "3.1.2",
+    "node-sass": "4.7.2", //used by webpack sass-loader package (below)
+    "npm-run-all": "3.1.1", //run multiple npm tasks in parallel
+    "nsp": "^2.6.2", //npm package security scanner
+    "open": "0.0.5", //opens a web browser after building
+    "sass-loader": "^6.0.6", //webpack loader to transpile sass
+    "style-loader": "0.13.1", //embeds styles into dom
+    "webpack": "1.13.2",
+    "webpack-manifest-plugin": "1.3.2" //used to inject webpack hashed assets into index.pug
+  }
+}

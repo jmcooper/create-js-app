@@ -1,0 +1,35 @@
+doctype html
+html(lang="en")
+  head
+    title Pluralsight - Partnerships Home Page Editor
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    link(rel="stylesheet", href=css)
+
+    if newrelic
+      != newrelic.getBrowserTimingHeader()
+
+    //- include ./partials/dns-prefetch.pug
+
+    //- link(rel="stylesheet", href=typographyComUrl)
+
+    //- != javascriptTag('shared.js')
+    //- include ./partials/analytics-load-top.pug
+    link(rel="stylesheet", href=`//s2.pluralsight.com/prism/prism-${prism.version}.min.css`)
+    //- link(rel="stylesheet", href="bundle.css")
+    script(type="text/javascript", src=`//s2.pluralsight.com/prism/prism-${prism.version}.min.js`)
+    != stylesheetTag('main.css')
+
+  body
+    #ps-banners
+
+    #ps-container
+      #ps-chrome
+      #ps-main(tabindex=-1)
+
+    script(type='text/javascript').
+      __INITIAL_STATE__ = !{JSON.stringify(initialState)}
+    != javascriptTag('main.js')
+
+
+
+    //- include ./partials/analytics-load-bottom.pug

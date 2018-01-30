@@ -1,3 +1,4 @@
 Is ParcelJs any good instead of webpack?
 Decided not to use image-webpack-loader
 I didn't add ExtractTextPlugin.  Should we?
+Browsersync has to be pointed to the right place in mappings.txt

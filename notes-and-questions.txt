@@ -1,2 +1,3 @@
 Is ParcelJs any good instead of webpack?
 Decided not to use image-webpack-loader
+I didn't add ExtractTextPlugin.  Should we?

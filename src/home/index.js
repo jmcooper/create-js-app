@@ -4,10 +4,13 @@ import Helmet from 'react-helmet'
 import styles from './index.scss'
 
 const Home = props => {
+  console.log(styles)
   return (
     <div>
       <Helmet title="Home" />
-      <h1 className="{styles.yellow}">Hello world</h1>
+      <h1>
+        Hello <span className={styles.yellow}>world</span>
+      </h1>
     </div>
   )
 }

@@ -36,14 +36,21 @@ export default {
         },
       },
       {
-        test: /\.(s*)css$/,
-        loaders: ['style-loader', 'css-loader', 'sass-loader'],
+        test: /\.scss$/,
+        exclude: /node_modules/,
+        use: [
+          { loader: 'style-loader' },
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true,
+              importLoaders: 1,
+              localIdentName: '[local]---[hash:base64:5]',
+            },
+          },
+          { loader: 'sass-loader' },
+        ],
       },
     ],
   },
-  //   loaders: [
-  //     { test: /\.js$/, exclude: /node_modules/, loaders: ['babel'] },
-  //     { test: /\.(s*)css$/, loaders: ['style', 'css', 'sass'] },
-  //   ],
-  // },
 }
